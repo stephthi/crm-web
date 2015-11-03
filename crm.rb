@@ -1,3 +1,4 @@
+require_relative 'contact'
 require 'sinatra'
 
 get '/' do
@@ -6,7 +7,11 @@ get '/' do
 end
 
 get '/contacts' do
-	"Contacts"
+	Contact.create("Steph", "Nguyen", "steph@bitmakers.com", "Front-End")
+  Contact.create("Lauren", "Herdman", "lauren@bitmakers.com", "Back-End")
+  Contact.create("Zain", "Wania", "zain@bitmakers.com", "Full-Stack")
+
+  erb :contacts
 end
 
 get '/contacts/new' do
