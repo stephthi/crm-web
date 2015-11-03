@@ -19,5 +19,5 @@ get '/contacts/new' do
 end
 
 post '/contacts' do
-  puts params
+  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
 end
