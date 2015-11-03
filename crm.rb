@@ -7,10 +7,6 @@ get '/' do
 end
 
 get '/contacts' do
-	Contact.create("Steph", "Nguyen", "steph@bitmakers.com", "Front-End")
-  Contact.create("Lauren", "Herdman", "lauren@bitmakers.com", "Back-End")
-  Contact.create("Zain", "Wania", "zain@bitmakers.com", "Full-Stack")
-
   erb :contacts
 end
 
