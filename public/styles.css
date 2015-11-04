@@ -32,10 +32,12 @@ nav {
 	font-family: Impact, sans-serif;
 	text-align: center;
 	border-radius: 10px;
+	color: black;
 }
 
 a.button:hover {
 	background-color: #FFA07A;
+	color: #140A0A;
 }
 
 .main {
@@ -45,6 +47,9 @@ a.button:hover {
 
 footer {
 	float: bottom;
+	font-size: 12px;
+	font-color: white;
+	font-family: Arial, sans-serif;
 }
 
 .contactslist {

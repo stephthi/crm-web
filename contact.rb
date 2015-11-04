@@ -15,8 +15,6 @@ class Contact
   def self.create(first_name, last_name, email, notes)
     new_contact = new(first_name, last_name, email, notes)
     @@contacts << new_contact
-
-    puts "New contact added with ID #{new_contact.id}"
   end
 
   def self.all
