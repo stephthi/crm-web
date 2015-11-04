@@ -1,7 +1,7 @@
 <h1>Welcome to <%= @crm_app_name %></h1>
 <h3>All Contacts</h3>
 
-<ul>
+<ul class="contactslist">
 <% Contact.all.each do |contact| %>
   <li><%= contact.first_name %> <%= contact.last_name %></li>
 <% end %>
