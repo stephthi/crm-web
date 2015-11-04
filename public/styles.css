@@ -3,9 +3,25 @@
 }
 
 body {
-	background-color: #FF4500;
+	background-image: url('white.png');
+	background-size: auto;
+	min-height: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
 	text-align: center;
 	margin-top: 20px;
+	color: black;
+}
+
+#top {
+	font-size: 40px;
+	font-family: Arial, sans-serif;
+	border: 2px solid black;
+	padding-top: 20px;
+	height: 70px;
+	margin-top: 0px;
+	font-color: black;
+	text-shadow: -3px 0 0 #37C1BC;
 }
 
 .headstyle {
@@ -21,8 +37,8 @@ nav {
 
 .button {
 	padding-top: 10px;
-	background-color: #FA8072;
-	border: 2px solid #FF0000;
+	background-color: #C0EAE9;
+	border: 2px solid #37C1BC;
 	width: 100px;
 	height: 50px;
 	margin-top: 100px;
@@ -33,11 +49,13 @@ nav {
 	text-align: center;
 	border-radius: 10px;
 	color: black;
+	text-decoration: none;
 }
 
 a.button:hover {
-	background-color: #FFA07A;
-	color: #140A0A;
+	background-color: #DAF8F7;
+	color: #2A504F;
+	text-decoration: none;
 }
 
 .main {
@@ -46,9 +64,10 @@ a.button:hover {
 }
 
 footer {
-	float: bottom;
+	position: center;
+	float: 0px;
 	font-size: 12px;
-	font-color: white;
+	font-color: black;
 	font-family: Arial, sans-serif;
 }
 
