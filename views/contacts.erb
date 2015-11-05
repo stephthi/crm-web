@@ -2,6 +2,15 @@
 
 <ul class="contactslist">
 <% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %></li>
-<% end %>
+  <table class="contacttable" align="center">
+  <tr>
+  	<td>
+  		<li><%= contact.first_name %> <%= contact.last_name %></li></td>
+ 				<td><a href="/contacts/<%= contact.id %>">
+					<input type="button" name="View Contact" value="View">
+		</a></td>
+		</tr>
+		</table>
+	<% end %>
 </ul>
+
