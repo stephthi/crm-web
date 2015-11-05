@@ -1,12 +1,24 @@
 <h1 id="contactsnew">Create a New Contact</h1>
-
+<br></br>
+<p class="infocontact">Please enter the following information to create a new contact:</p>
 <div>
 	<form action="/contacts" method="post">
-	  <input type="text" name="first_name" value="First Name">
-	  <input type="text" name="last_name" value="Last Name">
-	  <input type="text" name="email" value="Email">
-	  <input type="text" name="note" value="Note">
+	<table class="contacttable" align="center">
+	  <tr>
+	  <td><input type="text" name="first_name" placeholder="Ex: John"></td>
+	  <td><input type="text" name="last_name" placeholder="Ex: Smith"></td>
+	  <td><input type="text" name="email" placeholder="Ex: john@smith.com"></td>
+	  <td><input type="text" name="notes" placeholder="Ex: coworker"></td>
+	  </tr>
+	  <tr>
+	  <td><label for="first_name">First Name</label></td>
+	 	<td><label for="last_name">Last Name</label></td>
+	 	<td><label for="email">Email</label></td>
+	 	<td><label for="notes">Note</label></td>
+		</tr>
+	</table>
 	  <input type="submit" name="Submit">
+
 	</form>
 
 </div>
