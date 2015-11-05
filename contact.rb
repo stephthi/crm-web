@@ -26,10 +26,7 @@ class Contact
   end
 
   def self.find(id)
-    self.all.each do |contact|
-      if id == contact.id
-        return contact
-      end
+    @@contacts.find { |contact| id == id }
     end
   end
 

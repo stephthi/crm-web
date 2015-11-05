@@ -26,9 +26,25 @@ body {
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Stereofunk';
+	src: url('Stereofunk.ttf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('BebasNeue.otf');
+}
+
+@font-face {
+	font-family: 'Porter';
+	src: url('Porter-Bold.ttf');
+}
+
 #top {
 	font-size: 40px;
-	font-family: Arial, sans-serif;
+	font-family: 'Porter';
 	border: 2px solid black;
 	padding: 20px;
 	margin-bottom: -2px;
@@ -74,7 +90,7 @@ a.button:hover {
 }
 
 .main {
-	font-family: 'Oswald-ExtraLight';
+	font-family: 'Oswald';
 	color: black;
 	font-size: 30px;
 }
@@ -117,6 +133,10 @@ footer {
 
 .infocontact {
 	font-size: 14px;
-	font-style: italic
+	font-style: italic;
+	margin: 0px;
 }
 
+p {
+	margin: 0px;
+}
