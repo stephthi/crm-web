@@ -18,6 +18,9 @@ class Contact
     @@contacts << new_contact
   end
 
+  def delete
+    @@contacts.delete_if { |contact| contact.id == self.id }
+  end
 
   def self.all
     @@contacts
@@ -31,17 +34,16 @@ class Contact
 
   def self.find(contact_id)
     @@contacts.find { |contact| contact.id == contact_id }
-    end
   end
 
 
-  def self.delete(id)
-    self.all.each do |contact|
-      if id.to_i == contact.id
-        @@contacts.delete_at(@@contacts.index(contact))
-      end
-    end
-  end
+  # def self.delete(id)
+  #   self.all.each do |contact|
+  #     if id.to_i == contact.id
+  #       @@contacts.delete_at(@@contacts.index(contact))
+  #     end
+  #   end
+  # end
 
 
   def self.display_element(element)
@@ -64,3 +66,6 @@ class Contact
       end
     end
   end
+end
+
+
