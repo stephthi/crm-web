@@ -1,8 +1,10 @@
 class Contact
-	attr_accessor :first_name, :last_name, :email, :notes
+  #attr_accessor :first_name, :last_name, :email, :notes
+  attr_accessor :notes, :first_name, :last_name, :email
   attr_reader :id
   @@contacts = []
   @@id = 1000
+
   def initialize(first_name, last_name, email, notes)
     @first_name = first_name
     @last_name = last_name
@@ -16,6 +18,7 @@ class Contact
   def self.create(first_name, last_name, email, notes)
     new_contact = new(first_name, last_name, email, notes)
     @@contacts << new_contact
+    new_contact
   end
 
   def delete
@@ -31,20 +34,31 @@ class Contact
     "#{first_name} #{last_name}"
   end
 
+  def self.delete_all
+    @@contacts = []
+  end
 
   def self.find(contact_id)
     @@contacts.find { |contact| contact.id == contact_id }
   end
 
+  def self.search_by_attribute(attribute, value)
+    @@contacts.select{|contact| contact.send(attribute.to_sym) == value}
+  end
 
-  # def self.delete(id)
-  #   self.all.each do |contact|
-  #     if id.to_i == contact.id
-  #       @@contacts.delete_at(@@contacts.index(contact))
-  #     end
-  #   end
-  # end
 
+  def update(field, new_value)
+    if field == "first_name"
+      @first_name = new_value
+    elsif field == "last_name"
+      @last_name = new_value
+    elsif field == "email"
+      @email = new_value
+    else
+      @notes = new_value
+    end
+
+  end
 
   def self.display_element(element)
     case element
@@ -67,5 +81,6 @@ class Contact
     end
   end
 end
+
 
 
