@@ -3,6 +3,7 @@
 <p class="infocontact">Please enter the following information to update the chosen contact:</p>
 <div>
 	<form action="/contacts/<%= @contact.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
 	<table class="contacttable" align="center">
 	  <tr>
 	  <td><input type="text" name="first_name" placeholder="Ex: John"></td>
