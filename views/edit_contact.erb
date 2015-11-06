@@ -6,10 +6,10 @@
 	<input type="hidden" name="_method" value="put">
 	<table class="contacttable" align="center">
 	  <tr>
-	  <td><input type="text" name="first_name" placeholder="Ex: John"></td>
-	  <td><input type="text" name="last_name" placeholder="Ex: Smith"></td>
-	  <td><input type="text" name="email" placeholder="Ex: john@smith.com"></td>
-	  <td><input type="text" name="notes" placeholder="Ex: coworker"></td>
+	  <td><input type="text" name="first_name" placeholder="Ex: John" value="<%= @contact.first_name %>"></td>
+	  <td><input type="text" name="last_name" placeholder="Ex: Smith" value="<%= @contact.last_name %>"></td>
+	  <td><input type="text" name="email" placeholder="Ex: john@smith.com" value="<%= @contact.email %>"></td>
+	  <td><input type="text" name="notes" placeholder="Ex: coworker" value="<%= @contact.notes %>"></td>
 	  </tr>
 	  <tr>
 	  <td><label for="first_name">First Name</label></td>
